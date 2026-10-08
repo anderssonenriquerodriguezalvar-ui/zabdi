@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,234 +8,109 @@
     <title>ZABDI | Restaurante</title>
 
     <!-- Bootstrap 5.3.8 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS -->
+    <!-- CSS propio -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================
-     BARRA DE NAVEGACIÓN
-========================= -->
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+    ========================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
-    <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">
+                ZABDI
+            </a>
 
-        <a class="navbar-brand" href="#inicio">
-            <span class="brand-icon">
-                <i class="bi bi-cup-hot-fill"></i>
-            </span>
-            <span>
-                <strong>ZABDI</strong>
-                <small>RESTAURANTE</small>
-            </span>
-        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal"
-            aria-controls="menuPrincipal"
-            aria-expanded="false"
-            aria-label="Abrir menú"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
 
-        <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
 
-            <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#inicio">Inicio</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comida">Comida</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#comida">Comida</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bebidas">Bebidas</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#bebidas">Bebidas</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#licuados">Licuados</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#pupusas">Pupusas</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#frozen">Frozen</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#informacion">Información</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pupusas">Pupusas</a>
+                    </li>
 
-                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                    <a href="#contacto" class="btn btn-nav">
-                        <i class="bi bi-telephone-fill"></i>
-                        Contacto
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
 
-            </ul>
-
-        </div>
-    </div>
-</nav>
-
-
-<!-- =========================
-     INICIO / HERO
-========================= -->
-
-<header id="inicio" class="hero">
-
-    <div class="hero-overlay"></div>
-
-    <div class="container hero-content">
-
-        <div class="row align-items-center">
-
-            <div class="col-lg-7">
-
-                <span class="hero-tag">
-                    <i class="bi bi-stars"></i>
-                    SABOR SALVADOREÑO
-                </span>
-
-                <h1>
-                    El sabor que
-                    <span>te hace volver</span>
-                </h1>
-
-                <p>
-                    Bienvenido a ZABDI, un espacio donde la tradición
-                    salvadoreña se encuentra con un toque especial.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#comida" class="btn btn-primary-zabdi">
-                        Ver menú
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-
-                    <a href="#informacion" class="btn btn-outline-light">
-                        Conócenos
-                    </a>
-
-                </div>
+                </ul>
 
             </div>
-
         </div>
-
-    </div>
-
-    <div class="hero-scroll">
-        <span>Descubre nuestro menú</span>
-        <i class="bi bi-chevron-down"></i>
-    </div>
-
-</header>
+    </nav>
 
 
-<!-- =========================
-     PRESENTACIÓN
-========================= -->
+    <!-- =========================
+         INICIO
+    ========================== -->
+    <header id="inicio" class="hero">
 
-<section class="presentation section-padding">
+        <div class="container">
 
-    <div class="container">
+            <div class="row align-items-center min-vh-75">
 
-        <div class="row align-items-center g-5">
+                <div class="col-lg-7">
 
-            <div class="col-lg-6">
-
-                <div class="section-heading">
-
-                    <span class="section-label">
-                        BIENVENIDOS A ZABDI
+                    <span class="badge badge-restaurante mb-3">
+                        RESTAURANTE ZABDI
                     </span>
 
-                    <h2>
-                        Tradición servida
-                        <span>con pasión</span>
-                    </h2>
+                    <h1>
+                        Sabor que se disfruta
+                        <span>en cada plato</span>
+                    </h1>
 
-                </div>
-
-                <p class="lead-text">
-                    En ZABDI creemos que una buena comida no solamente
-                    alimenta, también crea momentos que vale la pena recordar.
-                </p>
-
-                <p>
-                    Nuestro menú reúne algunos de los sabores favoritos
-                    de El Salvador, preparados con dedicación y pensando
-                    en ofrecer una experiencia agradable para cada visitante.
-                </p>
-
-                <div class="presentation-features">
-
-                    <div>
-                        <i class="bi bi-check-circle-fill"></i>
-                        Ingredientes seleccionados
-                    </div>
-
-                    <div>
-                        <i class="bi bi-check-circle-fill"></i>
-                        Sabor tradicional
-                    </div>
-
-                    <div>
-                        <i class="bi bi-check-circle-fill"></i>
-                        Atención especial
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-6">
-
-                <div class="about-card">
-
-                    <div class="about-card-icon">
-                        <i class="bi bi-egg-fried"></i>
-                    </div>
-
-                    <span>NUESTRA ESPECIALIDAD</span>
-
-                    <h3>
-                        Chicharrón con queso
-                    </h3>
-
-                    <p>
-                        Una combinación llena de sabor para quienes
-                        buscan disfrutar algo especial.
+                    <p class="lead">
+                        Disfruta de nuestra variedad de comidas, bebidas,
+                        licuados, frozen y pupusas preparadas para compartir
+                        buenos momentos.
                     </p>
 
-                    <a href="#comida">
-                        Explorar menú
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <div class="mt-4">
+
+                        <a href="#comida" class="btn btn-principal me-2">
+                            Ver menú
+                        </a>
+
+                        <a href="#contacto" class="btn btn-outline-light">
+                            Contáctanos
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -242,269 +118,380 @@
 
         </div>
 
-    </div>
-
-</section>
+    </header>
 
 
-<!-- =========================
-     COMIDA
-========================= -->
+    <!-- =========================
+         COMIDA
+    ========================== -->
+    <section id="comida" class="seccion">
 
-<section id="comida" class="menu-section section-padding">
+        <div class="container">
 
-    <div class="container">
-
-        <div class="section-heading text-center">
-
-            <span class="section-label">
-                NUESTRO MENÚ
-            </span>
-
-            <h2>
-                Comidas <span>favoritas</span>
-            </h2>
-
-            <p>
-                Disfruta de opciones preparadas para satisfacer
-                todos los gustos.
-            </p>
-
-        </div>
-
-        <div class="row g-4 mt-3">
-
-            <!-- Plato 1 -->
-            <div class="col-md-6 col-lg-4">
-
-                <article class="food-card">
-
-                    <div class="food-image food-image-1">
-                        <span class="food-badge">Popular</span>
-
-                        <div class="food-icon">
-                            <i class="bi bi-egg-fried"></i>
-                        </div>
-                    </div>
-
-                    <div class="food-content">
-
-                        <div class="food-title">
-                            <h3>Chicharrón con queso</h3>
-                            <strong>$5.00</strong>
-                        </div>
-
-                        <p>
-                            Deliciosa combinación de chicharrón
-                            y queso para disfrutar en cualquier momento.
-                        </p>
-
-                        <button
-                            class="btn-food"
-                            onclick="mostrarPedido('Chicharrón con queso')"
-                        >
-                            Pedir
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-
-                    </div>
-
-                </article>
-
+            <div class="titulo-seccion">
+                <span>MENÚ</span>
+                <h2>Comida</h2>
+                <p>
+                    Encuentra diferentes opciones para disfrutar
+                    de una buena comida.
+                </p>
             </div>
 
+            <div class="row g-4">
 
-            <!-- Plato 2 -->
-            <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                        <div class="icono-menu">
+                            <i class="bi bi-egg-fried"></i>
+                        </div>
 
-                <article class="food-card">
+                        <h3>Quesadillas</h3>
 
-                    <div class="food-image food-image-2">
+                        <p>
+                            Deliciosas quesadillas preparadas
+                            para disfrutar en cualquier momento.
+                        </p>
+                    </div>
+                </div>
 
-                        <div class="food-icon">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+
+                        <div class="icono-menu">
+                            <i class="bi bi-bag-fill"></i>
+                        </div>
+
+                        <h3>Tortas</h3>
+
+                        <p>
+                            Tortas preparadas con ingredientes
+                            seleccionados y mucho sabor.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+
+                        <div class="icono-menu">
+                            <i class="bi bi-burger"></i>
+                        </div>
+
+                        <h3>Hamburguesas</h3>
+
+                        <p>
+                            Hamburguesas preparadas al momento
+                            para disfrutar con toda la familia.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+
+                        <div class="icono-menu">
+                            <i class="bi bi-circle-fill"></i>
+                        </div>
+
+                        <h3>Tacos</h3>
+
+                        <p>
+                            Tacos preparados con ingredientes
+                            frescos y llenos de sabor.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+
+                        <div class="icono-menu">
+                            <i class="bi bi-basket-fill"></i>
+                        </div>
+
+                        <h3>Burritos</h3>
+
+                        <p>
+                            Burritos preparados con una combinación
+                            de ingredientes para una comida completa.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+
+                        <div class="icono-menu">
                             <i class="bi bi-fire"></i>
                         </div>
 
-                    </div>
-
-                    <div class="food-content">
-
-                        <div class="food-title">
-                            <h3>Carne asada</h3>
-                            <strong>$6.00</strong>
-                        </div>
+                        <h3>Carnes</h3>
 
                         <p>
-                            Carne preparada al estilo tradicional,
-                            acompañada con complementos.
+                            Platos de carne preparados a la plancha
+                            o asados, según tu preferencia.
                         </p>
 
-                        <button
-                            class="btn-food"
-                            onclick="mostrarPedido('Carne asada')"
-                        >
-                            Pedir
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-
                     </div>
-
-                </article>
-
-            </div>
+                </div>
 
 
-            <!-- Plato 3 -->
-            <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 mx-md-auto">
+                    <div class="menu-card">
 
-                <article class="food-card">
-
-                    <div class="food-image food-image-3">
-
-                        <div class="food-icon">
-                            <i class="bi bi-basket2-fill"></i>
+                        <div class="icono-menu">
+                            <i class="bi bi-star-fill"></i>
                         </div>
 
-                    </div>
-
-                    <div class="food-content">
-
-                        <div class="food-title">
-                            <h3>Desayuno típico</h3>
-                            <strong>$4.50</strong>
-                        </div>
+                        <h3>Pechuga</h3>
 
                         <p>
-                            Una opción completa inspirada en los
-                            sabores tradicionales salvadoreños.
+                            Platos de pechuga preparados a la plancha
+                            o asados.
                         </p>
 
-                        <button
-                            class="btn-food"
-                            onclick="mostrarPedido('Desayuno típico')"
-                        >
-                            Pedir
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-
                     </div>
-
-                </article>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     BEBIDAS
-========================= -->
+    <!-- =========================
+         BEBIDAS
+    ========================== -->
+    <section id="bebidas" class="seccion seccion-clara">
 
-<section id="bebidas" class="drinks-section section-padding">
+        <div class="container">
 
-    <div class="container">
-
-        <div class="row align-items-center g-5">
-
-            <div class="col-lg-5">
-
-                <div class="section-heading">
-
-                    <span class="section-label">
-                        PARA ACOMPAÑAR
-                    </span>
-
-                    <h2>
-                        Bebidas
-                        <span>refrescantes</span>
-                    </h2>
-
-                    <p>
-                        Complementa tu comida con una bebida
-                        preparada para disfrutar cada momento.
-                    </p>
-
-                </div>
-
-                <div class="drink-highlight">
-                    <i class="bi bi-cup-straw"></i>
-
-                    <div>
-                        <strong>Hechas para ti</strong>
-                        <small>
-                            Diferentes opciones para acompañar
-                            tus platos favoritos.
-                        </small>
-                    </div>
-                </div>
-
+            <div class="titulo-seccion">
+                <span>BEBIDAS</span>
+                <h2>Refresca tu momento</h2>
+                <p>
+                    Acompaña tus comidas con nuestras opciones de bebidas.
+                </p>
             </div>
 
-            <div class="col-lg-7">
 
-                <div class="drinks-list">
+            <div class="row g-4">
 
-                    <div class="drink-item">
+                <div class="col-md-6">
 
-                        <div class="drink-item-icon">
-                            <i class="bi bi-droplet-fill"></i>
-                        </div>
+                    <div class="lista-card">
 
-                        <div>
-                            <h3>Horchata</h3>
-                            <p>Bebida tradicional y refrescante.</p>
-                        </div>
-
-                        <strong>$2.00</strong>
-
-                    </div>
-
-                    <div class="drink-item">
-
-                        <div class="drink-item-icon">
+                        <div class="lista-icono">
                             <i class="bi bi-cup-straw"></i>
                         </div>
 
                         <div>
-                            <h3>Jugo natural</h3>
-                            <p>Preparado con fruta.</p>
-                        </div>
+                            <h3>Coca-Cola</h3>
 
-                        <strong>$2.50</strong>
+                            <ul>
+                                <li>Presentación personal</li>
+                                <li>Presentación de 1 litro</li>
+                                <li>Presentación de 2 litros</li>
+                            </ul>
+                        </div>
 
                     </div>
 
-                    <div class="drink-item">
+                </div>
 
-                        <div class="drink-item-icon">
-                            <i class="bi bi-cup-hot-fill"></i>
-                        </div>
 
-                        <div>
-                            <h3>Café</h3>
-                            <p>Perfecto para acompañar tu comida.</p>
-                        </div>
+                <div class="col-md-6">
 
-                        <strong>$1.50</strong>
+                    <div class="lista-card">
 
-                    </div>
-
-                    <div class="drink-item">
-
-                        <div class="drink-item-icon">
-                            <i class="bi bi-snow"></i>
+                        <div class="lista-icono">
+                            <i class="bi bi-cup-straw"></i>
                         </div>
 
                         <div>
-                            <h3>Refresco</h3>
-                            <p>Una opción fría y refrescante.</p>
+                            <h3>Jugos del Valle</h3>
+
+                            <ul>
+                                <li>Presentación personal</li>
+                                <li>Presentación de 1 litro</li>
+                                <li>Presentación de 2 litros</li>
+                            </ul>
                         </div>
 
-                        <strong>$1.50</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LICUADOS
+    ========================== -->
+    <section id="licuados" class="seccion">
+
+        <div class="container">
+
+            <div class="titulo-seccion">
+                <span>LICUADOS</span>
+                <h2>Licuados naturales</h2>
+                <p>
+                    Elige tu sabor favorito.
+                </p>
+            </div>
+
+
+            <div class="row g-3 justify-content-center">
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card">
+                        <i class="bi bi-cup"></i>
+                        <h4>Guineo</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card">
+                        <i class="bi bi-cup"></i>
+                        <h4>Fresa</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card">
+                        <i class="bi bi-cookie"></i>
+                        <h4>Galleta</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card">
+                        <i class="bi bi-cup"></i>
+                        <h4>Piña</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card">
+                        <i class="bi bi-cup"></i>
+                        <h4>Naranja</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FROZEN
+    ========================== -->
+    <section id="frozen" class="seccion seccion-clara">
+
+        <div class="container">
+
+            <div class="titulo-seccion">
+                <span>FROZEN</span>
+                <h2>Frozen</h2>
+                <p>
+                    Diferentes sabores para disfrutar bien frío.
+                </p>
+            </div>
+
+
+            <div class="row g-3 justify-content-center">
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card frozen">
+                        <i class="bi bi-snow"></i>
+                        <h4>Galleta</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card frozen">
+                        <i class="bi bi-snow"></i>
+                        <h4>Chocolate</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card frozen">
+                        <i class="bi bi-snow"></i>
+                        <h4>Vainilla</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card frozen">
+                        <i class="bi bi-snow"></i>
+                        <h4>Fresa</h4>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="sabor-card frozen">
+                        <i class="bi bi-snow"></i>
+                        <h4>Guineo</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PUPUSAS
+    ========================== -->
+    <section id="pupusas" class="seccion">
+
+        <div class="container">
+
+            <div class="titulo-seccion">
+                <span>TRADICIÓN</span>
+                <h2>Pupusas</h2>
+                <p>
+                    Nuestras pupusas, tal como las tenías anteriormente.
+                </p>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="pupusas-box">
+
+                        <div class="pupusa-item">
+                            <span>Pupusas</span>
+                            <span class="precio-pendiente">
+                                Precio próximamente
+                            </span>
+                        </div>
+
+                        <!--
+                            AQUÍ SE COLOCARÁN LAS PUPUSAS
+                            Y LOS PRECIOS EXACTOS DE TU VERSIÓN ANTERIOR.
+                        -->
 
                     </div>
 
@@ -514,247 +501,93 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     PUPUSAS
-========================= -->
+    <!-- =========================
+         UBICACIÓN
+    ========================== -->
+    <section id="ubicacion" class="seccion seccion-clara">
 
-<section id="pupusas" class="pupusas-section section-padding">
+        <div class="container">
 
-    <div class="container">
-
-        <div class="section-heading text-center">
-
-            <span class="section-label">
-                SABOR DE EL SALVADOR
-            </span>
-
-            <h2>
-                Pupusas <span>ZABDI</span>
-            </h2>
-
-            <p>
-                Una de las comidas más representativas de nuestro país.
-            </p>
-
-        </div>
-
-        <div class="row g-4 mt-3">
-
-            <div class="col-md-4">
-
-                <div class="pupusa-card">
-
-                    <div class="pupusa-number">01</div>
-
-                    <i class="bi bi-circle-fill"></i>
-
-                    <h3>Queso</h3>
-
-                    <p>
-                        Suave y deliciosa, preparada con queso.
-                    </p>
-
-                    <strong>$1.00</strong>
-
-                </div>
-
+            <div class="titulo-seccion">
+                <span>VISÍTANOS</span>
+                <h2>Ubicación</h2>
+                <p>
+                    Encuentra fácilmente nuestro restaurante.
+                </p>
             </div>
 
-            <div class="col-md-4">
 
-                <div class="pupusa-card featured">
-
-                    <span class="recommended">
-                        FAVORITA
-                    </span>
-
-                    <div class="pupusa-number">02</div>
-
-                    <i class="bi bi-circle-fill"></i>
-
-                    <h3>Revueltas</h3>
-
-                    <p>
-                        Una combinación clásica de queso,
-                        frijol y chicharrón.
-                    </p>
-
-                    <strong>$1.25</strong>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="pupusa-card">
-
-                    <div class="pupusa-number">03</div>
-
-                    <i class="bi bi-circle-fill"></i>
-
-                    <h3>Frijol con queso</h3>
-
-                    <p>
-                        Una combinación tradicional y deliciosa.
-                    </p>
-
-                    <strong>$1.00</strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     INFORMACIÓN
-========================= -->
-
-<section id="informacion" class="info-section section-padding">
-
-    <div class="container">
-
-        <div class="row g-4">
-
-            <div class="col-lg-4">
-
-                <div class="info-card">
-
-                    <div class="info-icon">
-                        <i class="bi bi-clock-fill"></i>
-                    </div>
-
-                    <h3>Horario</h3>
-
-                    <p>
-                        Lunes a sábado
-                    </p>
-
-                    <strong>
-                        8:00 AM – 8:00 PM
-                    </strong>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <div class="info-card">
-
-                    <div class="info-icon">
-                        <i class="bi bi-geo-alt-fill"></i>
-                    </div>
-
-                    <h3>Ubicación</h3>
-
-                    <p>
-                        Visítanos y disfruta
-                        nuestros platillos.
-                    </p>
-
-                    <strong>
-                        El Salvador
-                    </strong>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <div class="info-card">
-
-                    <div class="info-icon">
-                        <i class="bi bi-heart-fill"></i>
-                    </div>
-
-                    <h3>Calidad</h3>
-
-                    <p>
-                        Trabajamos para ofrecerte
-                        una experiencia especial.
-                    </p>
-
-                    <strong>
-                        Siempre contigo
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACTO
-========================= -->
-
-<section id="contacto" class="contact-section section-padding">
-
-    <div class="container">
-
-        <div class="contact-box">
-
-            <div class="row align-items-center g-4">
-
-                <div class="col-lg-7">
-
-                    <span class="section-label">
-                        ¿TIENES ALGUNA PREGUNTA?
-                    </span>
-
-                    <h2>
-                        Estamos para
-                        <span>atenderte</span>
-                    </h2>
-
-                    <p>
-                        Escríbenos o comunícate con nosotros
-                        para conocer más sobre ZABDI.
-                    </p>
-
-                </div>
+            <div class="row g-4 align-items-stretch">
 
                 <div class="col-lg-5">
 
-                    <div class="contact-actions">
+                    <div class="ubicacion-info">
 
-                        <a href="tel:+50300000000" class="contact-action">
-                            <i class="bi bi-telephone-fill"></i>
-                            <span>
-                                <small>Llámanos</small>
-                                Contactar
-                            </span>
-                        </a>
+                        <div class="info-item">
 
-                        <a
-                            href="https://wa.me/50300000000"
-                            target="_blank"
-                            class="contact-action"
-                        >
-                            <i class="bi bi-whatsapp"></i>
-                            <span>
-                                <small>WhatsApp</small>
-                                Escríbenos
-                            </span>
-                        </a>
+                            <div class="info-icono">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>
+                                    Ateos, La Libertad, El Salvador
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <div class="info-icono">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+
+                            <div>
+                                <h4>Horario</h4>
+                                <p>
+                                    Consulta nuestros horarios de atención.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <div class="info-icono">
+                                <i class="bi bi-geo-fill"></i>
+                            </div>
+
+                            <div>
+                                <h4>Referencia</h4>
+                                <p>
+                                    Cerca del Complejo Educativo
+                                    Católico San Antonio de Padua.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="mapa">
+
+                        <iframe
+                            src="https://www.google.com/maps?q=Ateos,La%20Libertad,El%20Salvador&output=embed"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
 
                     </div>
 
@@ -764,211 +597,270 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+    <section id="contacto" class="seccion contacto">
 
-<footer class="footer">
+        <div class="container">
 
-    <div class="container">
+            <div class="titulo-seccion titulo-blanco">
 
-        <div class="row g-4">
+                <span>CONTACTO</span>
 
-            <div class="col-lg-5">
-
-                <div class="footer-brand">
-
-                    <div class="footer-logo">
-                        <i class="bi bi-cup-hot-fill"></i>
-                    </div>
-
-                    <div>
-                        <h3>ZABDI</h3>
-                        <span>RESTAURANTE</span>
-                    </div>
-
-                </div>
+                <h2>Estamos para atenderte</h2>
 
                 <p>
-                    Sabores que representan nuestra tradición,
-                    preparados para compartir momentos especiales.
+                    Comunícate con nosotros para realizar consultas,
+                    pedidos o solicitar información.
                 </p>
 
             </div>
 
-            <div class="col-6 col-lg-3">
 
-                <h4>Explora</h4>
+            <div class="row g-4 justify-content-center">
 
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#comida">Comida</a></li>
-                    <li><a href="#bebidas">Bebidas</a></li>
-                    <li><a href="#pupusas">Pupusas</a></li>
-                </ul>
+                <div class="col-md-4">
 
-            </div>
+                    <div class="contacto-card">
 
-            <div class="col-6 col-lg-4">
+                        <i class="bi bi-telephone-fill"></i>
 
-                <h4>Información</h4>
+                        <h4>Teléfono</h4>
 
-                <ul class="footer-contact">
+                        <p>
+                            Próximamente
+                        </p>
 
-                    <li>
-                        <i class="bi bi-clock"></i>
-                        Lunes a sábado
-                    </li>
+                    </div>
 
-                    <li>
-                        <i class="bi bi-geo-alt"></i>
-                        El Salvador
-                    </li>
-
-                    <li>
-                        <i class="bi bi-telephone"></i>
-                        Contáctanos
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>
-                © <span id="year"></span> ZABDI Restaurante.
-                Todos los derechos reservados.
-            </p>
-
-            <div class="social-links">
-
-                <a href="#" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
-                </a>
-
-                <a href="#" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-
-                <a href="#" aria-label="TikTok">
-                    <i class="bi bi-tiktok"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-<!-- =========================
-     BOTÓN VOLVER ARRIBA
-========================= -->
-
-<button id="btnTop" aria-label="Volver arriba">
-    <i class="bi bi-arrow-up"></i>
-</button>
-
-
-<!-- =========================
-     MODAL PEDIDO
-========================= -->
-
-<div
-    class="modal fade"
-    id="pedidoModal"
-    tabindex="-1"
-    aria-hidden="true"
->
-
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content">
-
-            <div class="modal-header">
-
-                <h5 class="modal-title">
-                    <i class="bi bi-bag-check-fill"></i>
-                    Realizar pedido
-                </h5>
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Cerrar"
-                ></button>
-
-            </div>
-
-            <div class="modal-body">
-
-                <p>
-                    Has seleccionado:
-                </p>
-
-                <div class="selected-food" id="productoSeleccionado">
-                    Producto
                 </div>
 
-                <label for="cantidad" class="form-label">
-                    Cantidad
-                </label>
 
-                <input
-                    type="number"
-                    id="cantidad"
-                    class="form-control"
-                    min="1"
-                    value="1"
-                >
+                <div class="col-md-4">
+
+                    <div class="contacto-card">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                        <h4>WhatsApp</h4>
+
+                        <p>
+                            Escríbenos directamente.
+                        </p>
+
+                        <a href="#" class="btn btn-whatsapp">
+                            Abrir WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="contacto-card">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <h4>Correo</h4>
+
+                        <p>
+                            Próximamente
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="modal-footer">
 
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                >
-                    Cancelar
-                </button>
+            <!-- FORMULARIO -->
 
-                <button
-                    type="button"
-                    class="btn btn-primary-zabdi"
-                    onclick="confirmarPedido()"
-                >
-                    Confirmar
-                </button>
+            <div class="row justify-content-center mt-5">
+
+                <div class="col-lg-8">
+
+                    <div class="formulario-contacto">
+
+                        <h3>Envíanos un mensaje</h3>
+
+                        <form id="formContacto">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label for="nombre" class="form-label">
+                                        Nombre
+                                    </label>
+
+                                    <input type="text"
+                                        id="nombre"
+                                        class="form-control"
+                                        placeholder="Tu nombre"
+                                        required>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="telefono" class="form-label">
+                                        Teléfono
+                                    </label>
+
+                                    <input type="tel"
+                                        id="telefono"
+                                        class="form-control"
+                                        placeholder="Tu teléfono">
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <label for="mensaje" class="form-label">
+                                        Mensaje
+                                    </label>
+
+                                    <textarea
+                                        id="mensaje"
+                                        class="form-control"
+                                        rows="5"
+                                        placeholder="Escribe tu mensaje..."
+                                        required></textarea>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <button type="submit"
+                                        class="btn btn-principal">
+                                        Enviar mensaje
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                        <div id="mensajeFormulario"></div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</div>
+    </section>
 
 
-<!-- Bootstrap JS -->
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-></script>
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+    <footer>
 
-<!-- JavaScript -->
-<script src="script.js"></script>
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h3>ZABDI</h3>
+
+                    <p>
+                        Restaurante dedicado a ofrecer variedad,
+                        sabor y buenos momentos.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Enlaces</h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#inicio">Inicio</a>
+                        </li>
+
+                        <li>
+                            <a href="#comida">Comida</a>
+                        </li>
+
+                        <li>
+                            <a href="#bebidas">Bebidas</a>
+                        </li>
+
+                        <li>
+                            <a href="#contacto">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Redes</h5>
+
+                    <div class="redes">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="text-center">
+
+                <p class="mb-0">
+                    © <span id="anio"></span> ZABDI Restaurante.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript propio -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
