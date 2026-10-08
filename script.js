@@ -1,51 +1,54 @@
-/* =====================================================
-   ZABDI - JAVASCRIPT
-   ===================================================== */
+/* =========================================
+   ZABDI RESTAURANTE
+   JAVASCRIPT PRINCIPAL
+========================================= */
 
 
-/* =====================================================
+/* =========================================
+   AÑO AUTOMÁTICO
+========================================= */
+
+const year = document.getElementById("year");
+
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+
+/* =========================================
    NAVBAR AL HACER SCROLL
-   ===================================================== */
+========================================= */
 
-const navbar = document.querySelector(".navbar");
+const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
 
     if (window.scrollY > 50) {
-
         navbar.classList.add("scrolled");
-
     } else {
-
         navbar.classList.remove("scrolled");
-
     }
 
 });
 
 
-/* =====================================================
+/* =========================================
    BOTÓN VOLVER ARRIBA
-   ===================================================== */
+========================================= */
 
-const btnArriba = document.getElementById("btnArriba");
+const btnTop = document.getElementById("btnTop");
 
 window.addEventListener("scroll", () => {
 
     if (window.scrollY > 500) {
-
-        btnArriba.classList.add("mostrar");
-
+        btnTop.classList.add("show");
     } else {
-
-        btnArriba.classList.remove("mostrar");
-
+        btnTop.classList.remove("show");
     }
 
 });
 
-
-btnArriba.addEventListener("click", () => {
+btnTop.addEventListener("click", () => {
 
     window.scrollTo({
         top: 0,
@@ -55,24 +58,62 @@ btnArriba.addEventListener("click", () => {
 });
 
 
-/* =====================================================
-   CERRAR NAVBAR EN CELULAR
-   ===================================================== */
+/* =========================================
+   MENÚ ACTIVO
+========================================= */
 
-const enlacesNavbar = document.querySelectorAll(".navbar .nav-link");
-const menuNavbar = document.getElementById("menu");
+const sections = document.querySelectorAll("section, header");
+const navLinks = document.querySelectorAll(".nav-link");
 
-enlacesNavbar.forEach(enlace => {
+window.addEventListener("scroll", () => {
 
-    enlace.addEventListener("click", () => {
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 130;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        const href = link.getAttribute("href");
+
+        if (href === `#${current}`) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+
+/* =========================================
+   CERRAR MENÚ MOBILE
+========================================= */
+
+const menuPrincipal = document.getElementById("menuPrincipal");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
 
         if (window.innerWidth < 992) {
 
-            const bootstrapCollapse =
-                bootstrap.Collapse.getInstance(menuNavbar);
+            const menu = bootstrap.Collapse.getInstance(menuPrincipal);
 
-            if (bootstrapCollapse) {
-                bootstrapCollapse.hide();
+            if (menu) {
+                menu.hide();
             }
 
         }
@@ -82,44 +123,158 @@ enlacesNavbar.forEach(enlace => {
 });
 
 
-/* =====================================================
-   ACTIVAR ENLACE DEL NAVBAR SEGÚN LA SECCIÓN
-   ===================================================== */
+/* =========================================
+   MODAL DE PEDIDO
+========================================= */
 
-const secciones = document.querySelectorAll("section[id]");
-const enlaces = document.querySelectorAll(".nav-link");
+let productoActual = "";
 
-window.addEventListener("scroll", () => {
 
-    let posicionActual = window.scrollY + 150;
+/**
+ * Abre el modal con el producto seleccionado.
+ */
+function mostrarPedido(producto) {
 
-    secciones.forEach(seccion => {
+    productoActual = producto;
 
-        const inicio = seccion.offsetTop;
-        const altura = seccion.offsetHeight;
-        const id = seccion.getAttribute("id");
+    const productoSeleccionado =
+        document.getElementById("productoSeleccionado");
 
-        if (
-            posicionActual >= inicio &&
-            posicionActual < inicio + altura
-        ) {
+    productoSeleccionado.textContent = producto;
 
-            enlaces.forEach(enlace => {
+    const cantidad =
+        document.getElementById("cantidad");
 
-                enlace.classList.remove("active");
+    cantidad.value = 1;
 
-                if (
-                    enlace.getAttribute("href") === "#" + id
-                ) {
+    const modalElement =
+        document.getElementById("pedidoModal");
 
-                    enlace.classList.add("active");
+    const modal =
+        bootstrap.Modal.getOrCreateInstance(modalElement);
 
-                }
+    modal.show();
+}
 
-            });
 
+/**
+ * Confirma el pedido.
+ */
+function confirmarPedido() {
+
+    const cantidad =
+        parseInt(document.getElementById("cantidad").value);
+
+    if (isNaN(cantidad) || cantidad < 1) {
+
+        alert("Por favor, selecciona una cantidad válida.");
+
+        return;
+    }
+
+    alert(
+        `Pedido seleccionado:\n\n${cantidad} x ${productoActual}\n\nGracias por elegir ZABDI.`
+    );
+
+    const modalElement =
+        document.getElementById("pedidoModal");
+
+    const modal =
+        bootstrap.Modal.getInstance(modalElement);
+
+    if (modal) {
+        modal.hide();
+    }
+
+}
+
+
+/* =========================================
+   ANIMACIÓN DE ENTRADA
+========================================= */
+
+const animatedElements = document.querySelectorAll(
+    ".food-card, .pupusa-card, .info-card, .drink-item, .about-card"
+);
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+animatedElements.forEach(element => {
+
+    element.classList.add("scroll-hidden");
+
+    observer.observe(element);
+
+});
+
+
+/* =========================================
+   ESTILOS DINÁMICOS PARA ANIMACIÓN
+========================================= */
+
+const animationStyle = document.createElement("style");
+
+animationStyle.textContent = `
+
+    .scroll-hidden {
+        opacity: 0;
+        transform: translateY(25px);
+        transition:
+            opacity 0.7s ease,
+            transform 0.7s ease;
+    }
+
+    .scroll-hidden.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+`;
+
+document.head.appendChild(animationStyle);
+
+
+/* =========================================
+   VALIDACIÓN DE CANTIDAD
+========================================= */
+
+const cantidadInput =
+    document.getElementById("cantidad");
+
+if (cantidadInput) {
+
+    cantidadInput.addEventListener("input", () => {
+
+        if (cantidadInput.value < 1) {
+            cantidadInput.value = 1;
         }
 
     });
 
-});
+}
+
+
+/* =========================================
+   CONSOLA DE DESARROLLO
+========================================= */
+
+console.log("ZABDI Restaurante cargado correctamente.");
