@@ -1,1583 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZABDI Restaurante | Pupusas, comida, licuados y frozen en Tecpan</title>
+  <meta name="description" content="ZABDI Restaurante en Tecpan, desvío de Apico, El Salvador. Pupusas, comida típica, bebidas, licuados y frozen. Pide por WhatsApp.">
+  <meta name="theme-color" content="#c8102e">
 
-    <meta name="description"
-        content="ZABDI Restaurante - Comida, pupusas, bebidas, licuados y frozen. Un lugar para disfrutar con familia y amigos.">
-
-    <title>ZABDI | Restaurante</title>
-
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- =====================================================
-         BARRA SUPERIOR
-    ====================================================== -->
-
-    <div class="top-bar">
-
-        <div class="container">
-
-            <div class="top-content">
-
-                <span>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    Tecpan · Desvío de Apico
-                </span>
-
-                <span class="top-separator">|</span>
-
-                <span>
-                    <i class="bi bi-clock-fill"></i>
-                    Visítanos y disfruta
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-
-        <div class="container">
-
-            <a class="navbar-brand" href="#inicio">
-
-                <div class="brand-mark">
-                    Z
-                </div>
-
-                <div class="brand-text">
-
-                    <strong>ZABDI</strong>
-
-                    <small>RESTAURANTE</small>
-
-                </div>
-
-            </a>
-
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menú">
-
-                <span class="navbar-toggler-icon"></span>
-
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top zabdi-nav" id="navbar">
+    <div class="container">
+      <a class="navbar-brand brand" href="#inicio">ZABDI <span>Restaurante</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-label="Abrir menú">
+        <i class="bi bi-list text-white fs-2"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+          <li class="nav-item ms-lg-2">
+            <button class="btn btn-cart" data-bs-toggle="offcanvas" data-bs-target="#carrito">
+              <i class="bi bi-bag-heart-fill"></i> Mi pedido
+              <span class="badge-cart" id="cartCount">0</span>
             </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#inicio">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">
-                            Menú
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pupusas">
-                            Pupusas
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">
-                            Nosotros
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ubicacion">
-                            Ubicación
-                        </a>
-                    </li>
-
-                    <li class="nav-item ms-lg-3">
-
-                        <a
-                            class="btn btn-nav"
-                            href="#contacto">
-
-                            <i class="bi bi-telephone"></i>
-                            Contacto
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
+  <!-- HERO CARRUSEL -->
+  <header id="inicio">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active hero-slide hero-1">
+          <div class="hero-content container">
+            <span class="hero-tag">Tecpan · Desvío de Apico</span>
+            <h1>Pupusas hechas<br>con sabor de casa</h1>
+            <p>Revueltas, de queso, frijol, loroco y más, calientitas y recién salidas del comal.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#menu" class="btn btn-zabdi btn-lg">Ver el menú</a>
+              <a href="#" class="btn btn-outline-light btn-lg js-whatsapp"><i class="bi bi-whatsapp"></i> Pedir ahora</a>
             </div>
-
+          </div>
         </div>
-
-    </nav>
-
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
-    <header id="inicio" class="hero-section">
-
-        <div class="hero-overlay"></div>
-
-        <div class="container hero-container">
-
-            <div class="row align-items-center">
-
-                <div class="col-lg-7">
-
-                    <div class="hero-content">
-
-                        <div class="hero-label">
-
-                            <span></span>
-
-                            SABOR QUE SE COMPARTE
-
-                        </div>
-
-
-                        <h1>
-                            Bienvenido a
-                            <span>ZABDI</span>
-                        </h1>
-
-
-                        <p class="hero-description">
-
-                            Un lugar para disfrutar de buena comida,
-                            bebidas refrescantes y momentos especiales
-                            junto a quienes más quieres.
-
-                        </p>
-
-
-                        <div class="hero-buttons">
-
-                            <a
-                                href="#menu"
-                                class="btn btn-main">
-
-                                Ver nuestro menú
-
-                                <i class="bi bi-arrow-right"></i>
-
-                            </a>
-
-
-                            <a
-                                href="#ubicacion"
-                                class="btn btn-outline-light">
-
-                                <i class="bi bi-geo-alt"></i>
-
-                                Cómo llegar
-
-                            </a>
-
-                        </div>
-
-
-                        <div class="hero-features">
-
-                            <div>
-
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                <span>Variedad</span>
-
-                            </div>
-
-
-                            <div>
-
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                <span>Sabor</span>
-
-                            </div>
-
-
-                            <div>
-
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                <span>Tradición</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="carousel-item hero-slide hero-2">
+          <div class="hero-content container">
+            <span class="hero-tag">Comida típica</span>
+            <h1>Platillos completos<br>para toda la familia</h1>
+            <p>Pollo, carne asada, sopa de gallina, desayunos típicos y mucho más.</p>
+            <a href="#menu" class="btn btn-zabdi btn-lg">Descubrir platillos</a>
+          </div>
         </div>
-
-
-        <a
-            href="#menu"
-            class="scroll-down">
-
-            <span>Descubre</span>
-
-            <i class="bi bi-chevron-down"></i>
-
-        </a>
-
-    </header>
-
-
-    <!-- =====================================================
-         PRESENTACIÓN
-    ====================================================== -->
-
-    <section class="intro-section">
-
-        <div class="container">
-
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6">
-
-                    <div class="section-heading text-start">
-
-                        <span class="eyebrow">
-                            BIENVENIDOS A ZABDI
-                        </span>
-
-                        <h2>
-                            Más que una comida,
-                            <em>un buen momento.</em>
-                        </h2>
-
-                    </div>
-
-
-                    <p class="intro-text">
-
-                        En ZABDI queremos que cada visita sea una
-                        experiencia agradable. Contamos con diferentes
-                        opciones para que puedas elegir lo que más te
-                        gusta y disfrutarlo en un ambiente tranquilo.
-
-                    </p>
-
-
-                    <p class="intro-text">
-
-                        Desde nuestros platos de comida hasta las
-                        tradicionales pupusas, bebidas, licuados y
-                        frozen, buscamos ofrecer variedad para todos.
-
-                    </p>
-
-
-                    <a
-                        href="#nosotros"
-                        class="text-link">
-
-                        Conoce más sobre nosotros
-
-                        <i class="bi bi-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-
-                <div class="col-lg-6">
-
-                    <div class="intro-highlight">
-
-                        <div class="highlight-number">
-                            Z
-                        </div>
-
-                        <div>
-
-                            <span>RESTAURANTE</span>
-
-                            <h3>
-                                Un sabor para cada momento
-                            </h3>
-
-                            <p>
-                                Comida preparada para compartir,
-                                disfrutar y volver.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="carousel-item hero-slide hero-3">
+          <div class="hero-content container">
+            <span class="hero-tag">Para refrescarte</span>
+            <h1>Licuados y frozen<br>bien fríos</h1>
+            <p>Fresa, mango, maracuyá, piña colada y más sabores naturales.</p>
+            <a href="#menu" class="btn btn-zabdi btn-lg">Elegir mi bebida</a>
+          </div>
         </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         MENÚ
-    ====================================================== -->
-
-    <section id="menu" class="menu-section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    NUESTRO MENÚ
-                </span>
-
-                <h2>
-                    Algo delicioso
-                    <em>para ti</em>
-                </h2>
-
-                <p>
-                    Conoce algunas de las opciones que puedes
-                    encontrar en ZABDI.
-                </p>
-
-            </div>
-
-
-            <!-- PESTAÑAS -->
-
-            <ul
-                class="nav nav-pills menu-tabs justify-content-center"
-                id="menuTabs"
-                role="tablist">
-
-                <li class="nav-item" role="presentation">
-
-                    <button
-                        class="nav-link active"
-                        data-bs-toggle="pill"
-                        data-bs-target="#comida"
-                        type="button">
-
-                        <i class="bi bi-egg-fried"></i>
-
-                        Comida
-
-                    </button>
-
-                </li>
-
-
-                <li class="nav-item" role="presentation">
-
-                    <button
-                        class="nav-link"
-                        data-bs-toggle="pill"
-                        data-bs-target="#bebidas"
-                        type="button">
-
-                        <i class="bi bi-cup-straw"></i>
-
-                        Bebidas
-
-                    </button>
-
-                </li>
-
-
-                <li class="nav-item" role="presentation">
-
-                    <button
-                        class="nav-link"
-                        data-bs-toggle="pill"
-                        data-bs-target="#licuados"
-                        type="button">
-
-                        <i class="bi bi-cup"></i>
-
-                        Licuados
-
-                    </button>
-
-                </li>
-
-
-                <li class="nav-item" role="presentation">
-
-                    <button
-                        class="nav-link"
-                        data-bs-toggle="pill"
-                        data-bs-target="#frozen"
-                        type="button">
-
-                        <i class="bi bi-snow"></i>
-
-                        Frozen
-
-                    </button>
-
-                </li>
-
-            </ul>
-
-
-            <div class="tab-content">
-
-
-                <!-- COMIDA -->
-
-                <div
-                    class="tab-pane fade show active"
-                    id="comida">
-
-                    <div class="row g-4">
-
-
-                        <div class="col-md-6 col-lg-4">
-
-                            <div class="food-card">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-egg-fried"></i>
-                                </div>
-
-                                <h3>Quesadillas</h3>
-
-                                <p>
-                                    Una opción deliciosa para
-                                    disfrutar a cualquier hora.
-                                </p>
-
-                                <span class="food-tag">
-                                    Favorito
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-4">
-
-                            <div class="food-card">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-bag-fill"></i>
-                                </div>
-
-                                <h3>Tortas</h3>
-
-                                <p>
-                                    Preparadas con ingredientes
-                                    para una comida completa.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-4">
-
-                            <div class="food-card">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-circle-fill"></i>
-                                </div>
-
-                                <h3>Hamburguesas</h3>
-
-                                <p>
-                                    Una opción clásica para disfrutar
-                                    en familia o con amigos.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-4">
-
-                            <div class="food-card">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-fire"></i>
-                                </div>
-
-                                <h3>Tacos</h3>
-
-                                <p>
-                                    Una opción llena de sabor para
-                                    los amantes de la comida mexicana.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-4">
-
-                            <div class="food-card">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-basket-fill"></i>
-                                </div>
-
-                                <h3>Burritos</h3>
-
-                                <p>
-                                    Una combinación completa para
-                                    disfrutar en cualquier momento.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-4">
-
-                            <div class="food-card featured-food">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-fire"></i>
-                                </div>
-
-                                <h3>Platos de carne</h3>
-
-                                <p>
-                                    Carne preparada a la plancha
-                                    o asada, según tu preferencia.
-                                </p>
-
-                                <span class="food-tag">
-                                    Especialidad
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-lg-4 mx-auto">
-
-                            <div class="food-card">
-
-                                <div class="food-icon">
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <h3>Pechuga</h3>
-
-                                <p>
-                                    Platos de pechuga preparados
-                                    a la plancha o asados.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BEBIDAS -->
-
-                <div
-                    class="tab-pane fade"
-                    id="bebidas">
-
-                    <div class="row g-4 justify-content-center">
-
-                        <div class="col-md-6">
-
-                            <div class="drink-card">
-
-                                <div class="drink-icon">
-                                    <i class="bi bi-cup-straw"></i>
-                                </div>
-
-                                <div>
-
-                                    <span class="small-label">
-                                        REFRESCOS
-                                    </span>
-
-                                    <h3>Coca-Cola</h3>
-
-                                    <ul>
-                                        <li>Personal</li>
-                                        <li>1 litro</li>
-                                        <li>2 litros</li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6">
-
-                            <div class="drink-card">
-
-                                <div class="drink-icon">
-                                    <i class="bi bi-cup-straw"></i>
-                                </div>
-
-                                <div>
-
-                                    <span class="small-label">
-                                        JUGOS
-                                    </span>
-
-                                    <h3>Jugos del Valle</h3>
-
-                                    <ul>
-                                        <li>Personal</li>
-                                        <li>1 litro</li>
-                                        <li>2 litros</li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- LICUADOS -->
-
-                <div
-                    class="tab-pane fade"
-                    id="licuados">
-
-                    <div class="flavors-grid">
-
-                        <div class="flavor-item">
-
-                            <i class="bi bi-cup"></i>
-
-                            <h4>Guineo</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item">
-
-                            <i class="bi bi-cup"></i>
-
-                            <h4>Fresa</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item">
-
-                            <i class="bi bi-cookie"></i>
-
-                            <h4>Galleta</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item">
-
-                            <i class="bi bi-cup"></i>
-
-                            <h4>Piña</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item">
-
-                            <i class="bi bi-cup"></i>
-
-                            <h4>Naranja</h4>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FROZEN -->
-
-                <div
-                    class="tab-pane fade"
-                    id="frozen">
-
-                    <div class="flavors-grid">
-
-                        <div class="flavor-item frozen-item">
-
-                            <i class="bi bi-snow"></i>
-
-                            <h4>Galleta</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item frozen-item">
-
-                            <i class="bi bi-snow"></i>
-
-                            <h4>Chocolate</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item frozen-item">
-
-                            <i class="bi bi-snow"></i>
-
-                            <h4>Vainilla</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item frozen-item">
-
-                            <i class="bi bi-snow"></i>
-
-                            <h4>Fresa</h4>
-
-                        </div>
-
-
-                        <div class="flavor-item frozen-item">
-
-                            <i class="bi bi-snow"></i>
-
-                            <h4>Guineo</h4>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FRANJA DE VENTAJAS -->
+  <section class="perks">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3"><i class="bi bi-fire"></i><strong>Recién hecho</strong><small>Todo al momento</small></div>
+        <div class="col-6 col-md-3"><i class="bi bi-whatsapp"></i><strong>Pide por WhatsApp</strong><small>Rápido y sin filas</small></div>
+        <div class="col-6 col-md-3"><i class="bi bi-people-fill"></i><strong>Ambiente familiar</strong><small>Ven a disfrutar</small></div>
+        <div class="col-6 col-md-3"><i class="bi bi-cash-coin"></i><strong>Precios justos</strong><small>Sabor que rinde</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head text-center reveal">
+        <span class="eyebrow">Nuestro menú</span>
+        <h2>Elige tu antojo</h2>
+        <p>Agrega lo que quieras a tu pedido y envíalo directo por WhatsApp.</p>
+      </div>
+
+      <div class="menu-tools reveal">
+        <ul class="nav nav-pills menu-tabs" id="menuTabs"></ul>
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="search" id="buscador" class="form-control" placeholder="Buscar en el menú…" aria-label="Buscar en el menú">
         </div>
+      </div>
 
-    </section>
+      <div class="row g-4" id="menuGrid"></div>
+      <p class="text-center text-muted mt-4 d-none" id="sinResultados">No encontramos ese platillo. Prueba con otra palabra.</p>
+    </div>
+  </section>
 
+  <!-- GALERÍA -->
+  <section class="section section-alt" id="galeria">
+    <div class="container">
+      <div class="section-head text-center reveal">
+        <span class="eyebrow">Galería</span>
+        <h2>Se antoja con solo verlo</h2>
+      </div>
+      <div class="row g-3" id="galleryGrid"></div>
+    </div>
+  </section>
 
-    <!-- =====================================================
-         PUPUSAS
-    ====================================================== -->
-
-    <section id="pupusas" class="pupusa-section">
-
-        <div class="container">
-
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-5">
-
-                    <div class="pupusa-intro">
-
-                        <span class="eyebrow">
-                            SABOR SALVADOREÑO
-                        </span>
-
-                        <h2>
-                            Nuestras
-                            <em>pupusas</em>
-                        </h2>
-
-                        <p>
-                            Una de las opciones que no puede faltar
-                            en nuestra mesa. Las pupusas forman parte
-                            de nuestra tradición y de nuestro menú.
-                        </p>
-
-                        <div class="pupusa-note">
-
-                            <i class="bi bi-heart-fill"></i>
-
-                            <span>
-                                Hechas para disfrutar en buena compañía.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-7">
-
-                    <div class="pupusa-menu">
-
-                        <!--
-                            AQUÍ PUEDES COLOCAR DESPUÉS
-                            LAS PUPUSAS EXACTAS Y LOS PRECIOS
-                            DE TU MENÚ ORIGINAL.
-                        -->
-
-                        <div class="pupusa-row">
-
-                            <div>
-                                <strong>Pupusas</strong>
-                                <small>
-                                    Variedad de sabores
-                                </small>
-                            </div>
-
-                            <span>
-                                Precio próximamente
-                            </span>
-
-                        </div>
-
-
-                        <div class="pupusa-row">
-
-                            <div>
-                                <strong>Especialidades</strong>
-                                <small>
-                                    Consulta disponibilidad
-                                </small>
-                            </div>
-
-                            <span>
-                                Precio próximamente
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal">
+          <div class="about-img" id="aboutImg"><span>🫓</span></div>
         </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         NOSOTROS
-    ====================================================== -->
-
-    <section id="nosotros" class="about-section">
-
-        <div class="container">
-
-            <div class="row g-5 align-items-center">
-
-                <div class="col-lg-6">
-
-                    <div class="about-box">
-
-                        <span class="about-letter">
-                            Z
-                        </span>
-
-                        <div>
-
-                            <span class="eyebrow">
-                                SOBRE ZABDI
-                            </span>
-
-                            <h2>
-                                Un espacio para
-                                <em>compartir</em>
-                            </h2>
-
-                            <p>
-                                ZABDI nace con la idea de ofrecer un
-                                lugar donde las personas puedan
-                                disfrutar de diferentes opciones
-                                de comida y bebidas.
-                            </p>
-
-                            <p>
-                                Queremos que cada visita sea cómoda,
-                                agradable y, sobre todo, que nuestros
-                                clientes encuentren algo que les guste.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-6">
-
-                    <div class="values-grid">
-
-                        <div class="value-card">
-
-                            <i class="bi bi-heart-fill"></i>
-
-                            <h4>Calidad</h4>
-
-                            <p>
-                                Cuidamos cada detalle de nuestro servicio.
-                            </p>
-
-                        </div>
-
-
-                        <div class="value-card">
-
-                            <i class="bi bi-people-fill"></i>
-
-                            <h4>Familia</h4>
-
-                            <p>
-                                Un espacio pensado para compartir.
-                            </p>
-
-                        </div>
-
-
-                        <div class="value-card">
-
-                            <i class="bi bi-star-fill"></i>
-
-                            <h4>Sabor</h4>
-
-                            <p>
-                                Variedad para diferentes gustos.
-                            </p>
-
-                        </div>
-
-
-                        <div class="value-card">
-
-                            <i class="bi bi-hand-thumbs-up-fill"></i>
-
-                            <h4>Servicio</h4>
-
-                            <p>
-                                Buscamos atenderte de la mejor manera.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="col-lg-6 reveal">
+          <span class="eyebrow">Sobre nosotros</span>
+          <h2>Cocina salvadoreña, trato cercano</h2>
+          <p>En ZABDI preparamos pupusas, comida típica, bebidas, licuados y frozen con ingredientes frescos y mucho cariño. Te esperamos en Tecpan, por el desvío de Apico, para que disfrutes en familia o con amigos.</p>
+          <ul class="about-list">
+            <li><i class="bi bi-check-circle-fill"></i> Pupusas hechas al momento</li>
+            <li><i class="bi bi-check-circle-fill"></i> Licuados y frozen de fruta</li>
+            <li><i class="bi bi-check-circle-fill"></i> Pedidos para llevar y para comer aquí</li>
+          </ul>
+          <a href="#" class="btn btn-zabdi btn-lg js-whatsapp"><i class="bi bi-whatsapp"></i> Escríbenos</a>
         </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         UBICACIÓN
-    ====================================================== -->
-
-    <section id="ubicacion" class="location-section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    ENCUÉNTRANOS
-                </span>
-
-                <h2>
-                    Nuestra
-                    <em>ubicación</em>
-                </h2>
-
-                <p>
-                    Estamos ubicados en Tecpan, por el desvío de Apico.
-                </p>
-
-            </div>
-
-
-            <div class="row g-4">
-
-                <div class="col-lg-5">
-
-                    <div class="location-card">
-
-                        <div class="location-card-header">
-
-                            <div class="location-icon">
-
-                                <i class="bi bi-geo-alt-fill"></i>
-
-                            </div>
-
-                            <div>
-
-                                <span>VISÍTANOS</span>
-
-                                <h3>
-                                    Tecpan
-                                </h3>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="location-details">
-
-                            <div class="detail">
-
-                                <i class="bi bi-pin-map-fill"></i>
-
-                                <div>
-
-                                    <strong>Referencia</strong>
-
-                                    <p>
-                                        Por el desvío de Apico.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="detail">
-
-                                <i class="bi bi-geo-fill"></i>
-
-                                <div>
-
-                                    <strong>Zona</strong>
-
-                                    <p>
-                                        Tecpan, El Salvador.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="detail">
-
-                                <i class="bi bi-info-circle-fill"></i>
-
-                                <div>
-
-                                    <strong>¿Necesitas llegar?</strong>
-
-                                    <p>
-                                        Utiliza el mapa para consultar
-                                        la ubicación y planificar tu ruta.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&query=Tecpan%20desvio%20de%20Apico%20El%20Salvador"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-main w-100">
-
-                            <i class="bi bi-map"></i>
-
-                            Abrir en Google Maps
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-7">
-
-                    <div class="map-container">
-
-                        <iframe
-                            src="https://www.google.com/maps?q=Tecpan%20desvio%20de%20Apico%20El%20Salvador&output=embed"
-                            loading="lazy"
-                            allowfullscreen>
-                        </iframe>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section id="ubicacion" class="section section-alt">
+    <div class="container">
+      <div class="section-head text-center reveal">
+        <span class="eyebrow">Visítanos</span>
+        <h2>¿Dónde estamos?</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-5 reveal">
+          <div class="info-card">
+            <div class="info-item"><i class="bi bi-geo-alt-fill"></i><div><strong>Dirección</strong><span>Tecpan, desvío de Apico, El Salvador</span></div></div>
+            <div class="info-item"><i class="bi bi-clock-fill"></i><div><strong>Horario</strong><span id="horarioTxt"></span></div></div>
+            <div class="info-item"><i class="bi bi-whatsapp"></i><div><strong>WhatsApp</strong><span id="telTxt"></span></div></div>
+            <a href="#" class="btn btn-zabdi w-100 mt-3 js-whatsapp"><i class="bi bi-whatsapp"></i> Hacer un pedido</a>
+            <a href="#" id="btnMapa" target="_blank" rel="noopener" class="btn btn-outline-dark w-100 mt-2"><i class="bi bi-map"></i> Cómo llegar</a>
+          </div>
         </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CONTACTO
-    ====================================================== -->
-
-    <section id="contacto" class="contact-section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    CONTÁCTANOS
-                </span>
-
-                <h2>
-                    Estamos para
-                    <em>atenderte</em>
-                </h2>
-
-                <p>
-                    ¿Tienes alguna pregunta? Escríbenos.
-                </p>
-
-            </div>
-
-
-            <div class="row g-4">
-
-
-                <div class="col-md-4">
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="bi bi-whatsapp"></i>
-
-                        </div>
-
-                        <h3>WhatsApp</h3>
-
-                        <p>
-                            Escríbenos directamente para
-                            realizar una consulta.
-                        </p>
-
-                        <a
-                            href="#"
-                            class="contact-link">
-
-                            Enviar mensaje
-
-                            <i class="bi bi-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="bi bi-telephone-fill"></i>
-
-                        </div>
-
-                        <h3>Teléfono</h3>
-
-                        <p>
-                            Nuestro número de contacto
-                            estará disponible próximamente.
-                        </p>
-
-                        <span class="contact-disabled">
-                            Próximamente
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="bi bi-envelope-fill"></i>
-
-                        </div>
-
-                        <h3>Correo</h3>
-
-                        <p>
-                            También podrás comunicarte
-                            con nosotros por correo.
-                        </p>
-
-                        <span class="contact-disabled">
-                            Próximamente
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- FORMULARIO -->
-
-            <div class="contact-form-wrapper">
-
-                <div class="row g-5 align-items-center">
-
-                    <div class="col-lg-5">
-
-                        <span class="eyebrow">
-                            ESCRÍBENOS
-                        </span>
-
-                        <h3>
-                            Queremos
-                            <em>escucharte.</em>
-                        </h3>
-
-                        <p>
-                            Puedes enviarnos una consulta utilizando
-                            el siguiente formulario.
-                        </p>
-
-                        <div class="form-note">
-
-                            <i class="bi bi-shield-check"></i>
-
-                            <span>
-                                Tus datos se utilizan únicamente
-                                para responder a tu mensaje.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-7">
-
-                        <form id="formContacto">
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-
-                                    <label for="nombre">
-                                        Nombre
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="nombre"
-                                        class="form-control"
-                                        placeholder="Tu nombre"
-                                        required>
-
-                                </div>
-
-
-                                <div class="col-md-6">
-
-                                    <label for="telefono">
-                                        Teléfono
-                                    </label>
-
-                                    <input
-                                        type="tel"
-                                        id="telefono"
-                                        class="form-control"
-                                        placeholder="Tu teléfono">
-
-                                </div>
-
-
-                                <div class="col-12">
-
-                                    <label for="mensaje">
-                                        Mensaje
-                                    </label>
-
-                                    <textarea
-                                        id="mensaje"
-                                        class="form-control"
-                                        rows="5"
-                                        placeholder="Escribe tu mensaje..."
-                                        required></textarea>
-
-                                </div>
-
-
-                                <div class="col-12">
-
-                                    <button
-                                        type="submit"
-                                        class="btn btn-main">
-
-                                        Enviar mensaje
-
-                                        <i class="bi bi-send-fill"></i>
-
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </form>
-
-
-                        <div id="mensajeFormulario"></div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="col-lg-7 reveal">
+          <div class="map-wrap">
+            <iframe id="mapFrame" title="Mapa de ZABDI Restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <!-- FOOTER -->
+  <footer class="zabdi-footer">
+    <div class="container text-center">
+      <div class="brand mb-2">ZABDI <span>Restaurante</span></div>
+      <p class="mb-1">Pupusas · Comida · Bebidas · Licuados · Frozen</p>
+      <small>© <span id="year"></span> ZABDI Restaurante. Tecpan, El Salvador.</small>
+    </div>
+  </footer>
 
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="#" class="wa-float js-whatsapp" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp"></i></a>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        <div class="container">
-
-            <div class="row g-5">
-
-                <div class="col-lg-5">
-
-                    <a
-                        href="#inicio"
-                        class="footer-brand">
-
-                        <span>Z</span>
-
-                        <div>
-
-                            <strong>ZABDI</strong>
-
-                            <small>RESTAURANTE</small>
-
-                        </div>
-
-                    </a>
-
-
-                    <p class="footer-description">
-
-                        Sabor, variedad y buenos momentos.
-                        Gracias por formar parte de ZABDI.
-
-                    </p>
-
-                </div>
-
-
-                <div class="col-6 col-lg-2">
-
-                    <h5>
-                        Navegación
-                    </h5>
-
-                    <ul>
-
-                        <li>
-                            <a href="#inicio">Inicio</a>
-                        </li>
-
-                        <li>
-                            <a href="#menu">Menú</a>
-                        </li>
-
-                        <li>
-                            <a href="#pupusas">Pupusas</a>
-                        </li>
-
-                        <li>
-                            <a href="#nosotros">Nosotros</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <div class="col-6 col-lg-2">
-
-                    <h5>
-                        Visítanos
-                    </h5>
-
-                    <ul>
-
-                        <li>
-                            <a href="#ubicacion">
-                                Ubicación
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#contacto">
-                                Contacto
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <div class="col-lg-3">
-
-                    <h5>
-                        ZABDI
-                    </h5>
-
-                    <p class="footer-location">
-
-                        <i class="bi bi-geo-alt-fill"></i>
-
-                        Tecpan, por el desvío de Apico.
-
-                    </p>
-
-
-                    <div class="social-links">
-
-                        <a href="#" aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-
-                        <a href="#" aria-label="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-
-                        <a href="#" aria-label="TikTok">
-                            <i class="bi bi-tiktok"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <hr>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    © <span id="anio"></span> ZABDI Restaurante.
-                    Todos los derechos reservados.
-                </p>
-
-                <p>
-                    Hecho con dedicación.
-                </p>
-
-            </div>
-
+  <!-- CARRITO -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title"><i class="bi bi-bag-heart-fill"></i> Mi pedido</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItems" class="flex-grow-1"></div>
+      <div class="cart-footer">
+        <div class="d-flex justify-content-between fs-5 fw-semibold mb-3">
+          <span>Total</span><span id="cartTotal">$0.00</span>
         </div>
+        <input type="text" id="clienteNombre" class="form-control mb-2" placeholder="Tu nombre">
+        <select id="tipoPedido" class="form-select mb-2">
+          <option value="Para comer aquí">Para comer aquí</option>
+          <option value="Para llevar">Para llevar</option>
+        </select>
+        <textarea id="clienteNota" class="form-control mb-3" rows="2" placeholder="Notas (sin cebolla, bien caliente…)"></textarea>
+        <button class="btn btn-zabdi w-100 btn-lg" id="btnEnviar"><i class="bi bi-whatsapp"></i> Enviar pedido por WhatsApp</button>
+        <button class="btn btn-link text-muted w-100 mt-1" id="btnVaciar">Vaciar pedido</button>
+      </div>
+    </div>
+  </div>
 
-    </footer>
+  <!-- TOAST -->
+  <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index:2000">
+    <div id="toastAdd" class="toast align-items-center text-bg-success border-0" role="status">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMsg">Agregado al pedido</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
 
-
-    <!-- Bootstrap -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
