@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZABDI Restaurante | Pupusas, comida, licuados y frozen en Tecpan</title>
+  <meta name="description" content="ZABDI Restaurante en Tecpan, por el desvío de Apico, El Salvador. Pupusas, comida típica, bebidas, licuados y frozen. Elige en el menú y pide por WhatsApp.">
+  <meta name="theme-color" content="#1B1714">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ZABDI Restaurante | Pupusas recién salidas del comal">
+  <meta property="og:description" content="Pupusas, comida típica, licuados y frozen en Tecpan. Pide por WhatsApp.">
+  <meta property="og:locale" content="es_SV">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%231B1714'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%23E8AE45' stroke='%23C9872A' stroke-width='3'/%3E%3Ccircle cx='26' cy='27' r='2.5' fill='%239A5A1C' fill-opacity='.6'/%3E%3Ccircle cx='38' cy='36' r='3' fill='%239A5A1C' fill-opacity='.6'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "ZABDI Restaurante",
+    "servesCuisine": ["Salvadoreña", "Pupusas"],
+    "telephone": "+50370214691",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tecpan",
+      "streetAddress": "Desvío de Apico",
+      "addressCountry": "SV"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ilustraciones e íconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Pupusa vista desde arriba. --acc = color del relleno que asoma -->
+      <symbol id="i-pupusa" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="25" fill="#E8AE45"/>
+        <circle cx="32" cy="32" r="25" fill="none" stroke="#C9872A" stroke-width="3"/>
+        <g fill="#9A5A1C" fill-opacity=".5">
+          <circle cx="21" cy="23" r="3.2"/><circle cx="40" cy="20" r="2.2"/><circle cx="45" cy="35" r="3.4"/>
+          <circle cx="25" cy="43" r="2.8"/><circle cx="34" cy="31" r="2"/><circle cx="17" cy="35" r="1.8"/>
+        </g>
+        <path d="M48 20c6 0 10 5 8 10s-7 5-10 2z" style="fill:var(--acc,#FFD84D)"/>
+      </symbol>
+      <symbol id="i-combo" viewBox="0 0 64 64">
+        <use href="#i-pupusa" x="-2" y="10" width="46" height="46"/>
+        <path d="M42 18h18l-2.5 30a3.5 3.5 0 0 1-3.5 3h-6a3.5 3.5 0 0 1-3.5-3z" style="fill:var(--c,#F3E8D2)" stroke="#E2D5BC" stroke-width="1.5"/>
+        <path d="M50 18l5-10" stroke="#C8301F" stroke-width="3" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-plato" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="27" fill="#fff" stroke="#E2D5BC" stroke-width="3"/>
+        <circle cx="32" cy="32" r="19" fill="none" stroke="#F0E6D0" stroke-width="2"/>
+        <path d="M13 26c3-9 19-12 28-5 5 4 3 13-3 16-9 4-22 2-25-11z" style="fill:var(--c,#8B3A22)"/>
+        <path d="M21 24l8 10M29 22l8 10" stroke="#000" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
+        <g fill="#F4F0E4" stroke="#D9CDB4"><circle cx="46" cy="42" r="3.5"/><circle cx="41" cy="47" r="3.5"/><circle cx="48" cy="48" r="3"/></g>
+        <circle cx="19" cy="46" r="5" fill="#6BA34A"/>
+      </symbol>
+      <symbol id="i-pollo" viewBox="0 0 64 64">
+        <g transform="rotate(-35 32 32)">
+          <rect x="36" y="28" width="16" height="5" rx="2.5" fill="#F4E6CF"/>
+          <circle cx="53" cy="27" r="3.5" fill="#F4E6CF"/><circle cx="53" cy="34" r="3.5" fill="#F4E6CF"/>
+          <ellipse cx="26" cy="30" rx="15" ry="12" style="fill:var(--c,#D9822B)"/>
+          <path d="M16 26c3-5 9-7 14-5" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+      <symbol id="i-sopa" viewBox="0 0 64 64">
+        <path d="M8 30h48c0 14-10 24-24 24S8 44 8 30z" style="fill:var(--c,#C4492F)"/>
+        <rect x="6" y="28" width="52" height="5" rx="2.5" fill="#E8D9BD"/>
+        <ellipse cx="32" cy="28.5" rx="22" ry="3" fill="#F3B64A"/>
+        <path d="M22 22c-3-4 3-6 0-11M32 22c-3-4 3-6 0-11M42 22c-3-4 3-6 0-11" fill="none" stroke="#B8A58B" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
+      </symbol>
+      <symbol id="i-pescado" viewBox="0 0 64 64">
+        <path d="M46 32l13-11v22z" fill="#5C8896"/>
+        <ellipse cx="28" cy="32" rx="21" ry="12" style="fill:var(--c,#6F9FB0)"/>
+        <path d="M26 21c4 6 4 16 0 22M34 22c3 5 3 15 0 20" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="16" cy="29" r="2.4" fill="#1B1714"/>
+      </symbol>
+      <symbol id="i-desayuno" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="27" fill="#fff" stroke="#E2D5BC" stroke-width="3"/>
+        <path d="M15 30c0-9 9-14 16-10 9-4 17 3 14 12-2 9-12 11-19 9-8 1-11-4-11-11z" fill="#FFFDF5" stroke="#EADFC8" stroke-width="1.5"/>
+        <circle cx="29" cy="29" r="7" fill="#F7B500"/>
+        <circle cx="27" cy="27" r="2" fill="#fff" fill-opacity=".6"/>
+        <ellipse cx="46" cy="44" rx="7" ry="4.5" fill="#5A3326"/>
+      </symbol>
+      <symbol id="i-yuca" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="27" fill="#fff" stroke="#E2D5BC" stroke-width="3"/>
+        <g fill="#F3CF6A" stroke="#D49A2C" stroke-width="1.5">
+          <rect x="12" y="23" width="30" height="9" rx="4.5" transform="rotate(-18 27 27)"/>
+          <rect x="16" y="31" width="32" height="9" rx="4.5" transform="rotate(8 32 35)"/>
+          <rect x="20" y="39" width="28" height="9" rx="4.5" transform="rotate(-6 34 43)"/>
+        </g>
+        <circle cx="47" cy="21" r="5" fill="#C65A3A"/>
+      </symbol>
+      <symbol id="i-tamal" viewBox="0 0 64 64">
+        <path d="M6 34c0-12 11-20 26-20s26 8 26 20-11 18-26 18S6 46 6 34z" fill="#6AA84F"/>
+        <path d="M11 34c7-8 35-8 42 0" fill="none" stroke="#4A8A38" stroke-width="2.5"/>
+        <path d="M22 17v34M42 17v34" stroke="#E8D9BD" stroke-width="3.5" stroke-linecap="round"/>
+        <ellipse cx="32" cy="22" rx="9" ry="3.5" fill="#F3CF6A"/>
+      </symbol>
+      <symbol id="i-vaso" viewBox="0 0 64 64">
+        <path d="M38 14l8-11" stroke-width="3.2" stroke-linecap="round" style="stroke:var(--acc,#1B1714)"/>
+        <path d="M16 14h32l-4 38a4 4 0 0 1-4 3.6H24a4 4 0 0 1-4-3.6z" style="fill:var(--c,#C8301F)"/>
+        <path d="M16 14h32l-.7 6H16.7z" fill="#fff" fill-opacity=".45"/>
+        <path d="M24 28l3 18" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-agua" viewBox="0 0 64 64">
+        <rect x="25" y="6" width="14" height="7" rx="2" fill="#2E6B3A"/>
+        <path d="M26 13h12l5 9v30a4 4 0 0 1-4 4H25a4 4 0 0 1-4-4V22z" fill="#D5EDF5" stroke="#8CC4D8" stroke-width="2"/>
+        <rect x="21" y="30" width="22" height="12" fill="#4FA3C0"/>
+        <path d="M27 36h10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-taza" viewBox="0 0 64 64">
+        <ellipse cx="30" cy="55" rx="23" ry="3.5" fill="#E8D9BD"/>
+        <path d="M47 29h3a7 7 0 0 1 0 14h-5" fill="none" stroke="#E2D5BC" stroke-width="4" stroke-linecap="round"/>
+        <path d="M10 27h38v10a16 16 0 0 1-16 16h-6a16 16 0 0 1-16-16z" fill="#fff" stroke="#E2D5BC" stroke-width="2"/>
+        <ellipse cx="29" cy="27" rx="19" ry="4" style="fill:var(--c,#4A2A1C)"/>
+        <path d="M22 19c-3-4 3-6 0-10M32 19c-3-4 3-6 0-10M42 19c-3-4 3-6 0-10" fill="none" stroke="#B8A58B" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
+      </symbol>
+      <symbol id="i-licuado" viewBox="0 0 64 64">
+        <path d="M38 14l9-11" stroke-width="3.2" stroke-linecap="round" stroke="#1B1714"/>
+        <path d="M15 14h34l-4.5 37a4 4 0 0 1-4 3.5h-17a4 4 0 0 1-4-3.5z" style="fill:var(--c,#F2708A)"/>
+        <path d="M15 14h34l-.8 7H15.8z" fill="#fff" fill-opacity=".55"/>
+        <path d="M23 30l2.5 16" stroke="#fff" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="49" cy="15" r="6" stroke="#fff" stroke-width="1.5" style="fill:var(--acc,#fff)"/>
+      </symbol>
+      <symbol id="i-frozen" viewBox="0 0 64 64">
+        <path d="M40 4l-6 20" stroke="#C8301F" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M13 27c0-11 8-18 19-18s19 7 19 18z" style="fill:var(--c,#F2708A)"/>
+        <path d="M20 22c8 4 16 4 24 0" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+        <path d="M13 27h38l-4 25a4 4 0 0 1-4 3.5H21a4 4 0 0 1-4-3.5z" fill="#fff" fill-opacity=".9" stroke="#E2D5BC" stroke-width="2"/>
+        <path d="M17 34h30l-1.4 9H18.4z" style="fill:var(--c,#F2708A)" fill-opacity=".35"/>
+      </symbol>
+
+      <!-- Íconos de interfaz -->
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 8h13l-1 12h-11z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 16 16"><path fill="currentColor" d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#menu">Saltar al menú</a>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="logo" href="#inicio" aria-label="ZABDI Restaurante, ir al inicio">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-pupusa" style="--acc:#FFD84D"/></svg>
+        <span class="logo-name">ZABDI</span>
+        <span class="logo-sub">Restaurante</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#menu">Menú</a>
+        <a href="#pedir">Cómo pedir</a>
+        <a href="#visitanos">Visítanos</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="btn-bag" id="openCart" type="button" aria-haspopup="dialog" aria-controls="drawer">
+          <svg class="i" aria-hidden="true"><use href="#i-bag"/></svg>
+          <span class="btn-bag-text">Mi pedido</span>
+          <b class="count" id="cartCount" aria-label="productos en tu pedido">0</b>
+        </button>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir navegación">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Pupusas recién salidas del comal</h1>
+          <p class="lead">Pupusas, comida típica, licuados y frozen en Tecpan, por el desvío de Apico. Elige en el menú y envía tu pedido por WhatsApp.</p>
+          <div class="hero-cta">
+            <a class="btn btn-dark" href="#menu">Ver el menú</a>
+            <a class="btn btn-ghost js-wa" href="#" target="_blank" rel="noopener">
+              <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg> Pedir por WhatsApp
+            </a>
+          </div>
+          <p class="hero-where">
+            <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span>Tecpan, desvío de Apico</span>
+          </p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg class="hero-svg" viewBox="0 0 520 520">
+            <circle cx="260" cy="260" r="244" fill="#1B1714"/>
+            <circle cx="260" cy="260" r="244" fill="none" stroke="#3B332C" stroke-width="8"/>
+            <circle cx="260" cy="260" r="206" fill="#241E1A"/>
+            <use href="#i-pupusa" x="78" y="92" width="190" height="190" style="--acc:#D2693A"/>
+            <use href="#i-pupusa" x="252" y="122" width="190" height="190" style="--acc:#FFD84D"/>
+            <use href="#i-pupusa" x="150" y="262" width="190" height="190" style="--acc:#6BA34A"/>
+
+            <g class="steam" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round">
+              <path class="s1" d="M180 108c-12-14 12-26 0-42"/>
+              <path class="s2" d="M340 136c-12-14 12-26 0-42"/>
+              <path class="s3" d="M112 346c-12-14 12-26 0-42"/>
+            </g>
+
+            <!-- curtido -->
+            <g transform="translate(404 392)">
+              <circle r="46" fill="#000" fill-opacity=".25" cy="6"/>
+              <circle r="46" fill="#E8D9BD"/>
+              <circle r="37" fill="#6FA14B"/>
+              <path d="M-24-8c8-9 17-9 25 0s14 9 21 0M-26 8c8-9 19-9 27 0s13 9 19 2" fill="none" stroke="#A8CF7C" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="14" cy="-16" r="5" fill="#D94A2B"/>
+            </g>
+            <!-- salsa -->
+            <g transform="translate(96 402)">
+              <circle r="40" fill="#000" fill-opacity=".25" cy="6"/>
+              <circle r="40" fill="#E8D9BD"/>
+              <circle r="32" fill="#C8301F"/>
+              <path d="M-16-9c7-7 18-7 25 0" fill="none" stroke="#E8604F" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="10" cy="10" r="3" fill="#8F1E12"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="bunting" aria-hidden="true">
+      <svg width="100%" height="36">
+        <defs>
+          <pattern id="flags" width="120" height="36" patternUnits="userSpaceOnUse">
+            <path d="M4 3h32L20 33z" fill="#C8301F"/>
+            <path d="M44 3h32L60 33z" fill="#F6C62B"/>
+            <path d="M84 3h32L100 33z" fill="#2E6B3A"/>
+            <circle cx="20" cy="13" r="3" fill="#FFFBF0"/>
+            <circle cx="60" cy="13" r="3" fill="#FFFBF0"/>
+            <circle cx="100" cy="13" r="3" fill="#FFFBF0"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="36" fill="url(#flags)"/>
+        <rect width="100%" height="3" fill="#1B1714"/>
+      </svg>
+    </div>
+
+    <!-- MENÚ -->
+    <section class="band" id="menu">
+      <div class="wrap">
+        <div class="menu-head">
+          <div>
+            <h2>El menú</h2>
+            <p class="band-lead">Toca el signo más para agregar a tu pedido. Al final lo envías por WhatsApp.</p>
+          </div>
+          <label class="search" for="buscador">
+            <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+            <span class="sr-only">Buscar en el menú</span>
+            <input class="field" type="search" id="buscador" placeholder="Buscar un platillo" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="tabs-bar">
+          <div class="tabs" id="tabs"></div>
+        </div>
+
+        <div class="board" id="board" aria-live="polite">
+          <div class="board-top">
+            <h3 id="boardTitle"></h3>
+            <p id="boardNote"></p>
+          </div>
+          <ul class="items" id="items"></ul>
+          <p class="empty-search" id="sinResultados" hidden>No encontramos ese platillo. Prueba con otra palabra o elige una categoría.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO PEDIR -->
+    <section class="band band-green" id="pedir">
+      <div class="wrap">
+        <h2>Así pides</h2>
+        <ol class="steps">
+          <li><p>Elige en el menú lo que se te antoja y ajusta las cantidades.</p></li>
+          <li><p>Abre tu pedido, escribe tu nombre y envíalo por WhatsApp.</p></li>
+          <li><p>Pasa a recogerlo o disfrútalo en el local.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- GALERÍA (solo aparece si hay fotos en img/) -->
+    <section class="band" id="galeria" hidden>
+      <div class="wrap">
+        <h2>De nuestra cocina</h2>
+        <ul class="gallery" id="galleryGrid"></ul>
+      </div>
+    </section>
+
+    <!-- VISÍTANOS -->
+    <section class="band band-masa" id="visitanos">
+      <div class="wrap">
+        <div class="visit-grid">
+          <div class="visit-info">
+            <h2>Visítanos en Tecpan</h2>
+            <p class="band-lead">Pasa a comer en el local o pide para llevar. Estamos por el desvío de Apico.</p>
+            <ul class="facts">
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
+                <div><strong>Dirección</strong><span id="dirTxt"></span></div>
+              </li>
+              <li id="rowHorario" hidden>
+                <svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>
+                <div><strong>Horario</strong><span id="horarioTxt"></span></div>
+              </li>
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+                <div><strong>WhatsApp</strong><a id="telTxt" href="#"></a></div>
+              </li>
+            </ul>
+            <div class="visit-cta">
+              <a class="btn btn-green js-wa" href="#" target="_blank" rel="noopener">
+                <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg> Escribir por WhatsApp
+              </a>
+              <a class="btn btn-ghost" id="btnMapa" href="#" target="_blank" rel="noopener">Cómo llegar</a>
+            </div>
+          </div>
+          <div class="map">
+            <iframe id="mapFrame" title="Mapa de ZABDI Restaurante en Tecpan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <div>
+        <div class="footer-brand">ZABDI <span>Restaurante</span></div>
+        <p>Pupusas, comida, bebidas, licuados y frozen.</p>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> ZABDI Restaurante. Tecpan, El Salvador.</p>
+    </div>
+  </footer>
+
+  <!-- BARRA DE PEDIDO (celular) -->
+  <button class="cartbar" id="cartbar" type="button" aria-haspopup="dialog" aria-controls="drawer" hidden>
+    <span id="cartbarQty">0 productos</span>
+    <span class="cartbar-go"><b id="cartbarTotal">$0.00</b> Ver pedido</span>
+  </button>
+
+  <!-- PEDIDO -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <h2 id="drawerTitle">Tu pedido</h2>
+      <button class="icon-btn" id="closeCart" type="button" aria-label="Cerrar tu pedido">
+        <svg class="i" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+
+    <div class="drawer-list" id="cartItems" tabindex="-1"></div>
+
+    <form class="drawer-foot" id="orderForm" novalidate>
+      <div class="total-row"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+
+      <label class="lbl" for="clienteNombre">Tu nombre</label>
+      <input class="field" type="text" id="clienteNombre" autocomplete="given-name" placeholder="Para llamarte cuando esté listo">
+
+      <fieldset class="seg">
+        <legend class="lbl">¿Dónde lo disfrutas?</legend>
+        <label><input type="radio" name="tipo" value="Para comer aquí" checked><span>Comer aquí</span></label>
+        <label><input type="radio" name="tipo" value="Para llevar"><span>Para llevar</span></label>
+      </fieldset>
+
+      <label class="lbl" for="clienteNota">Notas</label>
+      <textarea class="field" id="clienteNota" rows="2" placeholder="Sin cebolla, bien caliente…"></textarea>
+
+      <button class="btn btn-green btn-block" id="btnEnviar" type="submit">
+        <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg> Enviar pedido por WhatsApp
+      </button>
+      <button class="link-btn" id="btnVaciar" type="button">Vaciar pedido</button>
+    </form>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
